@@ -1,9 +1,9 @@
-# Webhook Service for Anokha 25's Special Events
+# Webhook Service for Anokha 26' Special Events
 
 This is a webhook service written for the following events which are being 
 conducted independently and require data after a successful transaction
 
-### ACM's Winter of Code, 2025
+### ACM's Winter of Code, 2026
 ```json 
 {
     "full_name": "Tyler Durden",
@@ -11,7 +11,7 @@ conducted independently and require data after a successful transaction
 }
 ```
 
-### AI-Verse Hackathon, 2025
+### AI-Verse Hackathon, 2026
 ```json
 {
     "team_name": "Fight Club",
