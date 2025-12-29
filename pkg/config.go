@@ -8,6 +8,7 @@ import (
 )
 
 type Config struct {
+	LogEnv      string `mapstructure:"env"`
 	RabbitMQURL string `mapstructure:"rabbitmq_url"`
 	WoC         struct {
 		WebhookURL string `mapstructure:"webhook_url"`
@@ -57,4 +58,3 @@ func validateURL(rawURL string) error {
 	}
 	return nil
 }
-
