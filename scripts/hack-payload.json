@@ -1,0 +1,62 @@
+[
+  {
+    "team_name": "Neural Knights",
+    "leader_name": "Aarav Mehta",
+    "leader_email": "aarav.mehta.dev@gmail.com",
+    "leader_phone_number": "+91-98200-12345",
+    "leader_college_name": "BITS Pilani",
+    "problem_statement": "agentic_ai",
+    "team_members": [
+      {
+        "name": "Ishani Roy",
+        "email": "i.roy.bits@gmail.com",
+        "phone_number": "+91-98200-12346",
+        "college_name": "BITS Pilani"
+      },
+      {
+        "name": "Sahil Gupta",
+        "email": "s.gupta.dev@gmail.com",
+        "phone_number": "+91-98200-12347",
+        "college_name": "BITS Pilani"
+      }
+    ]
+  },
+  {
+    "team_name": "Edge Pulse",
+    "leader_name": "Chloe Simmons",
+    "leader_email": "chloe.simm@gmail.com",
+    "leader_phone_number": "+1-415-555-0199",
+    "leader_college_name": "MIT",
+    "problem_statement": "aiot",
+    "team_members": [
+      {
+        "name": "Marcus Wright",
+        "email": "m.wright.eng@gmail.com",
+        "phone_number": "+1-415-555-0122",
+        "college_name": "MIT"
+      }
+    ]
+  },
+  {
+    "team_name": "Creative Quanta",
+    "leader_name": "Yuki Tanaka",
+    "leader_email": "yuki.tanaka.art@gmail.com",
+    "leader_phone_number": "+81-90-1234-5678",
+    "leader_college_name": "University of Tokyo",
+    "problem_statement": "generative_ai",
+    "team_members": [
+      {
+        "name": "Kenji Sato",
+        "email": "k.sato.research@gmail.com",
+        "phone_number": "+81-90-8765-4321",
+        "college_name": "University of Tokyo"
+      },
+      {
+        "name": "Hina Mori",
+        "email": "hina.mori.dev@gmail.com",
+        "phone_number": "+81-90-5555-6666",
+        "college_name": "University of Tokyo"
+      }
+    ]
+  }
+]
