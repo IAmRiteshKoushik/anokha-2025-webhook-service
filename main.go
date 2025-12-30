@@ -98,4 +98,3 @@ func main() {
 
 	pkg.Log.Info("All consumers have shut down. Exiting.")
 }
-
