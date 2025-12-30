@@ -3,6 +3,7 @@ env.toml
 
 # Comes from build
 tentacloid
+*.log
 
 # Comes from air
 tmp
