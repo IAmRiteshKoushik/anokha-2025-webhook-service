@@ -10,7 +10,7 @@ if ! command -v plumber &> /dev/null || ! command -v jq &> /dev/null;
 fi
 
 # Path to the JSON file
-JSON_FILE="test/woc-sample.json"
+JSON_FILE="scripts/woc-sample.json"
 
 # Check if the JSON file exists
 if [ ! -f "$JSON_FILE" ]; then
@@ -19,8 +19,8 @@ if [ ! -f "$JSON_FILE" ]; then
 fi
 
 # RabbitMQ settings
-EXCHANGE="tentacloid.woc"
-ROUTING_KEY="woc.new"
+EXCHANGE=""
+ROUTING_KEY="woc-registrations"
 
 # Read the JSON file and publish each object to RabbitMQ
 jq -c '.[]' "$JSON_FILE" | while IFS= read -r payload;
