@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/IAmRiteshKoushik/tentacloid/pkg"
 	amqp "github.com/rabbitmq/amqp091-go"
-	"github.com/rk/tentacloid/pkg"
 )
 
 // WocConsumer represents a consumer for the woc-registrations queue.

@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/rk/tentacloid/pkg"
+	"github.com/IAmRiteshKoushik/tentacloid/pkg"
 )
 
 type WoCPayload struct {
@@ -16,10 +16,6 @@ type WoCPayload struct {
 	Email     string `json:"email"`
 	Password  string `json:"password"`
 }
-
-const (
-	WebhookURL = "http://your-target-endpoint.com/woc"
-)
 
 var wocClient = &http.Client{
 	Timeout: time.Second * 10,
@@ -35,7 +31,7 @@ func DispatchWoCPayload(payload WoCPayload) error {
 		return fmt.Errorf("failed to marshal payload: %w", err)
 	}
 
-	req, err := http.NewRequest("POST", WebhookURL, bytes.NewBuffer(jsonData))
+	req, err := http.NewRequest("POST", pkg.AppConfig.WoC.WebhookURL, bytes.NewBuffer(jsonData))
 	if err != nil {
 		pkg.Log.Error("Failed to create HTTP request", err)
 		return fmt.Errorf("failed to create request: %w", err)
@@ -59,4 +55,3 @@ func DispatchWoCPayload(payload WoCPayload) error {
 	pkg.Log.Warn(fmt.Sprintf("Failed to dispatch payload for email: %s, status: %s", payload.Email, resp.Status))
 	return fmt.Errorf("request failed with status: %s", resp.Status)
 }
-

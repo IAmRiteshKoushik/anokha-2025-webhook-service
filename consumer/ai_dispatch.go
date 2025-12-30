@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/rk/tentacloid/pkg"
+	"github.com/IAmRiteshKoushik/tentacloid/pkg"
 )
 
 type HackathonPayload struct {
@@ -27,10 +27,6 @@ type HackathonTeamMember struct {
 	CollegeName string `json:"college_name"`
 }
 
-const (
-	AIWebhookURL = "http://your-target-endpoint.com/ai-hackathon"
-)
-
 var aiClient = &http.Client{
 	Timeout: time.Second * 10,
 }
@@ -44,7 +40,7 @@ func DispatchHackathonPayload(payload HackathonPayload) error {
 		return fmt.Errorf("failed to marshal payload: %w", err)
 	}
 
-	req, err := http.NewRequest("POST", AIWebhookURL, bytes.NewBuffer(jsonData))
+	req, err := http.NewRequest("POST", pkg.AppConfig.AIVerse.WebhookURL, bytes.NewBuffer(jsonData))
 	if err != nil {
 		pkg.Log.Error("Failed to create HTTP request", err)
 		return fmt.Errorf("failed to create request: %w", err)
